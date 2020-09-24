@@ -6,8 +6,10 @@ public class Main {
         try {
             int result = addArguments(args);
             System.out.println(result);
-        } catch (Exception e) {
-            System.err.println("Please provide arguements to add");
+        }   catch (ArrayIndexOutOfBoundsException e) {
+            System.err.println("Not enough arguements");
+        } catch(NumberFormatException n) {
+            System.err.println("Invalid characters");
         }
     }
 
