@@ -12,6 +12,17 @@ public class Main {
     }
 
     private static int addArguments(String[] args) {
-        return Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
+        int total = 0;
+
+        if(args[0].equals("-"))
+        {
+            for(int i=1;i<args.length;i++){
+                total-=Integer.valueOf(args[i]) ;
+            }
+        } else {
+            for(int i=0;i<args.length;i++){
+                total+=Integer.valueOf(args[i]) ;
+        }
+            return total;
     }
 }
